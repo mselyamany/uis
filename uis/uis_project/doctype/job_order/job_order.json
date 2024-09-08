@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-05 12:12:39.392553",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_order_details",
+  "project_no",
+  "project_name",
+  "department",
+  "column_break_kiqm",
+  "project_date",
+  "job_order_date",
+  "project_type",
+  "customer_details",
+  "customer_name",
+  "location",
+  "column_break_tqqk",
+  "contact_person",
+  "amended_from",
+  "services",
+  "services_details_section",
+  "service_job_order",
+  "assignment",
+  "employee_job_order",
+  "section_break_ukpr",
+  "asset_job_order",
+  "saftey_requirements_tab",
+  "saftey_requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_order_details",
+   "fieldtype": "Section Break",
+   "label": "Job Order Details"
+  },
+  {
+   "fieldname": "project_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project No.",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project_no.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project_no.department",
+   "fieldname": "department",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kiqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project_no.expected_start_date",
+   "fieldname": "project_date",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Project Date",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "job_order_date",
+   "fieldtype": "Date",
+   "label": "Job Order Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project_no.project_type",
+   "fieldname": "project_type",
+   "fieldtype": "Read Only",
+   "label": "Project Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_details",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fetch_from": "project_no.customer",
+   "fieldname": "customer_name",
+   "fieldtype": "Read Only",
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Address"
+  },
+  {
+   "fieldname": "column_break_tqqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "label": "Contact Person",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "services",
+   "fieldtype": "Tab Break",
+   "label": "Services"
+  },
+  {
+   "fieldname": "services_details_section",
+   "fieldtype": "Section Break",
+   "label": "Services Details"
+  },
+  {
+   "fieldname": "service_job_order",
+   "fieldtype": "Table",
+   "label": "Services",
+   "options": "service job order"
+  },
+  {
+   "fieldname": "assignment",
+   "fieldtype": "Tab Break",
+   "label": "Assignment"
+  },
+  {
+   "fieldname": "employee_job_order",
+   "fieldtype": "Table",
+   "label": "Employees Assignment",
+   "options": "employee job order"
+  },
+  {
+   "fieldname": "section_break_ukpr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "asset_job_order",
+   "fieldtype": "Table",
+   "label": "Asset Assignment",
+   "options": "asset job order"
+  },
+  {
+   "fieldname": "saftey_requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "Saftey Requirements"
+  },
+  {
+   "fieldname": "saftey_requirements",
+   "fieldtype": "Text",
+   "label": "Saftey Requirements"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-05 15:18:05.045574",
+ "modified_by": "Administrator",
+ "module": "UIS Project",
+ "name": "Job Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

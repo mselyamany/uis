@@ -1,0 +1,64 @@
+{
+ "charts": [
+  {
+   "chart_name": "Project Summary",
+   "label": "Open Project "
+  }
+ ],
+ "content": "[{\"id\":\"HVmpxL_TSo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UIS Projects</span>\",\"col\":12}},{\"id\":\"0GT2Sb7LFq\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Open Project \",\"col\":12}},{\"id\":\"22IN8VMnZz\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
+ "creation": "2024-09-05 14:07:46.705468",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "number-card",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "UIS Projects",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Order",
+   "link_count": 0,
+   "link_to": "Job Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-09-05 14:17:41.893354",
+ "modified_by": "Administrator",
+ "module": "UIS Project",
+ "name": "UIS Projects",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 19.0,
+ "shortcuts": [],
+ "title": "UIS Projects"
+}

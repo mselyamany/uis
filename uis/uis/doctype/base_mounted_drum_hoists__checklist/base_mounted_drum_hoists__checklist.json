@@ -1,0 +1,713 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-21 18:24:09.342244",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "checklist_information_section",
+  "customer_name",
+  "lnspection_location",
+  "equipment_type",
+  "manufacturers_name",
+  "model",
+  "plate_no",
+  "capacity_swl",
+  "wire_rope_diameter_length",
+  "column_break_tutu",
+  "job_order_no",
+  "inspection_date",
+  "sticker_no",
+  "serial_no",
+  "identification_no",
+  "year_of_built",
+  "type_of_inspection",
+  "ndt_mpi",
+  "inspection_criteria",
+  "ch1",
+  "column_break_kicj",
+  "com1",
+  "section_break_bytt",
+  "ch2",
+  "column_break_vvqp",
+  "com2",
+  "section_break_rzxh",
+  "ch3",
+  "column_break_htlt",
+  "com3",
+  "section_break_kfpi",
+  "ch4",
+  "column_break_xptj",
+  "com4",
+  "section_break_ahsr",
+  "ch5",
+  "column_break_ozna",
+  "com5",
+  "section_break_ztqh",
+  "ch6",
+  "column_break_sjft",
+  "com6",
+  "section_break_zblw",
+  "ch7",
+  "column_break_ovxc",
+  "com7",
+  "section_break_xmrz",
+  "ch8",
+  "column_break_vyqm",
+  "com8",
+  "section_break_ceqz",
+  "ch9",
+  "column_break_pmiy",
+  "com9",
+  "section_break_ouvs",
+  "ch10",
+  "column_break_txxn",
+  "com10",
+  "section_break_tkfy",
+  "ch11",
+  "column_break_lgpz",
+  "com11",
+  "section_break_wwlb",
+  "ch12",
+  "column_break_toot",
+  "com12",
+  "section_break_tkuw",
+  "ch12_a",
+  "column_break_xmjj",
+  "com12_a",
+  "section_break_lbzb",
+  "ch13",
+  "column_break_vjum",
+  "com13",
+  "section_break_eyjv",
+  "ch13_a",
+  "column_break_rhqf",
+  "com13_a",
+  "section_break_brtj",
+  "ch14",
+  "column_break_espa",
+  "com14",
+  "section_break_ndst",
+  "ch15",
+  "column_break_xeya",
+  "com15",
+  "section_break_zkuf",
+  "ch16",
+  "column_break_jkha",
+  "com16",
+  "section_break_ekxj",
+  "ch17",
+  "column_break_bnln",
+  "com17",
+  "section_break_rqcl",
+  "ch18",
+  "column_break_ieai",
+  "com18",
+  "section_break_sbex",
+  "ch19",
+  "column_break_jtwm",
+  "com19",
+  "section_break_kuvs",
+  "ch20",
+  "column_break_ksic",
+  "com20",
+  "section_break_grvq",
+  "inspector",
+  "date_insector",
+  "signature_inspector",
+  "column_break_svee",
+  "customer_representative",
+  "date_representative",
+  "signature_representative",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "checklist_information_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist Information"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lnspection_location",
+   "fieldtype": "Data",
+   "label": "Inspection Location"
+  },
+  {
+   "fieldname": "equipment_type",
+   "fieldtype": "Select",
+   "label": "Equipment Type",
+   "options": "\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "manufacturers_name",
+   "fieldtype": "Data",
+   "label": "Manufacturer\u2019s Name"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "plate_no",
+   "fieldtype": "Data",
+   "label": "Plate No."
+  },
+  {
+   "fieldname": "capacity_swl",
+   "fieldtype": "Data",
+   "label": "Capacity / SWL"
+  },
+  {
+   "fieldname": "wire_rope_diameter_length",
+   "fieldtype": "Data",
+   "label": "Wire Rope Diameter/Length"
+  },
+  {
+   "fieldname": "column_break_tutu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_order_no",
+   "fieldtype": "Data",
+   "label": "Job Order No."
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date"
+  },
+  {
+   "fieldname": "sticker_no",
+   "fieldtype": "Data",
+   "label": "Sticker No."
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No."
+  },
+  {
+   "fieldname": "identification_no",
+   "fieldtype": "Data",
+   "label": "Identification No."
+  },
+  {
+   "fieldname": "year_of_built",
+   "fieldtype": "Data",
+   "label": "Year of Built"
+  },
+  {
+   "fieldname": "type_of_inspection",
+   "fieldtype": "Data",
+   "label": "Type of Inspection"
+  },
+  {
+   "fieldname": "ndt_mpi",
+   "fieldtype": "Data",
+   "label": "NDT MPI"
+  },
+  {
+   "fieldname": "inspection_criteria",
+   "fieldtype": "Section Break",
+   "label": "Inspection Criteria"
+  },
+  {
+   "fieldname": "ch1",
+   "fieldtype": "Select",
+   "label": "1 Equipment documentation is available",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_kicj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com1",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_bytt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch2",
+   "fieldtype": "Select",
+   "label": "2 Previous inspection reports are checked",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_vvqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com2",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_rzxh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch3",
+   "fieldtype": "Select",
+   "label": "3  Rated load is clearly marked on bridge",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_htlt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com3",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_kfpi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch4",
+   "fieldtype": "Select",
+   "label": "4 Manufacturer\u2019s data available",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_xptj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com4",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_ahsr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch5",
+   "fieldtype": "Select",
+   "label": "5 Controls and protective equipment available",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_ozna",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com5",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_ztqh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch6",
+   "fieldtype": "Select",
+   "label": "6 All hoist limit devices are working",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_sjft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com6",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_zblw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch7",
+   "fieldtype": "Select",
+   "label": "7 All travel limit devices are working",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_ovxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com7",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_xmrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch8",
+   "fieldtype": "Select",
+   "label": "8 Ropes lubricated and free of damages",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_vyqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com8",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_ceqz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch9",
+   "fieldtype": "Select",
+   "label": "9 Fire extinguisher (10 BC) is fitted",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_pmiy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com9",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_ouvs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch10",
+   "fieldtype": "Select",
+   "label": "10 Hook(s) condition/performance",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_txxn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com10",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_tkfy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch11",
+   "fieldtype": "Select",
+   "label": "11 Rigging Hardware condition/performance",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_lgpz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com11",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_wwlb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch12",
+   "fieldtype": "Select",
+   "label": "12 pins, bearings, shafts, gears, rollers, and locking and clamping devices",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_toot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com12",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_tkuw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch12_a",
+   "fieldtype": "Select",
+   "label": "12-a  excessive wear, cracking, distortion, corrosion for point 12",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_xmjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com12_a",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_lbzb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch13",
+   "fieldtype": "Select",
+   "label": "13  brake and clutch system parts and linings",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_vjum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com13",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_eyjv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch13_a",
+   "fieldtype": "Select",
+   "label": "13-a  excessive wear, severe distortion, damage for point 13",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_rhqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com13_a",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_brtj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch14",
+   "fieldtype": "Select",
+   "label": "14 pawls and ratchets for (-a) excessive wear (-b) deformation",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_espa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com14",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_ndst",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch15",
+   "fieldtype": "Select",
+   "label": "15 All moving parts are lubricated",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_xeya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com15",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_zkuf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch16",
+   "fieldtype": "Select",
+   "label": "16 chain and chain drive sprockets for (-a) excessive wear (-b) excessive chain stretch",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_jkha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com16",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_ekxj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch17",
+   "fieldtype": "Select",
+   "label": "17 power source, if integral to winch, for (-a) improper performance (-b) noncompliance with manufacturer \u2019s requirements",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_bnln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com17",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_rqcl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch18",
+   "fieldtype": "Select",
+   "label": "18  any additional items specified by the manufacturer or a qualified person",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_ieai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com18",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_sbex",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch19",
+   "fieldtype": "Select",
+   "label": "19  LOAD TEST (Where applicable)",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_jtwm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com19",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_kuvs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ch20",
+   "fieldtype": "Select",
+   "label": "20  Final Conclusion (Accepted/Rejected)",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_ksic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "com20",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "section_break_grvq",
+   "fieldtype": "Section Break",
+   "label": "Signature Checklist"
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Data",
+   "label": "Inspector"
+  },
+  {
+   "fieldname": "date_insector",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "signature_inspector",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_svee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_representative",
+   "fieldtype": "Data",
+   "label": "Customer Representative"
+  },
+  {
+   "fieldname": "date_representative",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "signature_representative",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Base Mounted Drum Hoists  Checklist",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-25 09:56:48.338002",
+ "modified_by": "Administrator",
+ "module": "Uis",
+ "name": "Base Mounted Drum Hoists  Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

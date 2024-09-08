@@ -1,0 +1,129 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"OGGZx3GKpn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Inspection</span>\",\"col\":12}},{\"id\":\"R0gocPsKJU\",\"type\":\"card\",\"data\":{\"card_name\":\"Checklists and Forms\",\"col\":5}}]",
+ "creation": "2024-07-29 10:56:52.625452",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "unhide",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Inspection",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Checklists and Forms",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Backhoe Loader Checklist",
+   "link_count": 0,
+   "link_to": "Backhoe Loader Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Base Mounted Drum Hoists  Checklist",
+   "link_count": 0,
+   "link_to": "Base Mounted Drum Hoists  Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Forklift Checklist",
+   "link_count": 0,
+   "link_to": "Forklift Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Jacks Checklist",
+   "link_count": 0,
+   "link_to": "Jacks Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lever Hoist Checklist",
+   "link_count": 0,
+   "link_to": "Lever Hoist Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Man Basket Checklist",
+   "link_count": 0,
+   "link_to": "Man Basket Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mobile and Locomotive Cranes",
+   "link_count": 0,
+   "link_to": "Mobile and Locomotive Cranes",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Articulating Boom Cranes",
+   "link_count": 0,
+   "link_to": "Articulating Boom Cranes",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Derricks",
+   "link_count": 0,
+   "link_to": "Derricks",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-09-05 14:08:07.735465",
+ "modified_by": "Administrator",
+ "module": "Uis",
+ "name": "Inspection",
+ "number_cards": [],
+ "owner": "m.elyamany@uis-services.com",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 18.0,
+ "shortcuts": [],
+ "title": "Inspection"
+}
