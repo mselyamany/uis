@@ -1,12 +1,12 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "F.-.INS.-.01.-.02.-.######",
  "creation": "2024-08-21 18:24:09.342244",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "checklist_information_section",
-  "customer_name",
+  "job_order_no",
   "lnspection_location",
   "equipment_type",
   "manufacturers_name",
@@ -15,7 +15,7 @@
   "capacity_swl",
   "wire_rope_diameter_length",
   "column_break_tutu",
-  "job_order_no",
+  "customer_name",
   "inspection_date",
   "sticker_no",
   "serial_no",
@@ -128,43 +128,63 @@
    "label": "Checklist Information"
   },
   {
+   "fetch_from": "job_order_no.customer_name",
    "fieldname": "customer_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Customer Name",
    "options": "Customer",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "job_order_no.location",
    "fieldname": "lnspection_location",
    "fieldtype": "Data",
-   "label": "Inspection Location"
+   "label": "Inspection Location",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.equipment_type",
    "fieldname": "equipment_type",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Equipment Type",
-   "options": "\n1\n2\n3\n4"
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.manufacturer",
    "fieldname": "manufacturers_name",
    "fieldtype": "Data",
-   "label": "Manufacturer\u2019s Name"
+   "label": "Manufacturer\u2019s Name",
+   "options": "Manufacturers",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.model",
    "fieldname": "model",
    "fieldtype": "Data",
-   "label": "Model"
+   "label": "Model",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.plate_no",
    "fieldname": "plate_no",
    "fieldtype": "Data",
-   "label": "Plate No."
+   "label": "Plate No.",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.capacity_range_swl",
    "fieldname": "capacity_swl",
    "fieldtype": "Data",
-   "label": "Capacity / SWL"
+   "label": "Capacity / Range (SWL)",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "wire_rope_diameter_length",
@@ -177,43 +197,61 @@
   },
   {
    "fieldname": "job_order_no",
-   "fieldtype": "Data",
-   "label": "Job Order No."
+   "fieldtype": "Link",
+   "label": "Job Order No.",
+   "options": "Job Order",
+   "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "inspection_date",
    "fieldtype": "Date",
-   "label": "Inspection Date"
+   "label": "Inspection Date",
+   "reqd": 1
   },
   {
+   "depends_on": "doc.name",
    "fieldname": "sticker_no",
    "fieldtype": "Data",
-   "label": "Sticker No."
+   "label": "Sticker No.",
+   "read_only": 1
   },
   {
    "fieldname": "serial_no",
-   "fieldtype": "Data",
-   "label": "Serial No."
+   "fieldtype": "Link",
+   "label": "Serial No.",
+   "options": "Equpment Data",
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.identification_no",
    "fieldname": "identification_no",
    "fieldtype": "Data",
-   "label": "Identification No."
+   "label": "Identification No.",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.year_of_built",
    "fieldname": "year_of_built",
    "fieldtype": "Data",
-   "label": "Year of Built"
+   "label": "Year of Built",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "type_of_inspection",
-   "fieldtype": "Data",
-   "label": "Type of Inspection"
+   "fieldtype": "Link",
+   "label": "Type of Inspection",
+   "options": "Type of Inspection",
+   "reqd": 1
   },
   {
    "fieldname": "ndt_mpi",
-   "fieldtype": "Data",
-   "label": "NDT MPI"
+   "fieldtype": "Link",
+   "label": "NDT",
+   "options": "NDT Type",
+   "reqd": 1
   },
   {
    "fieldname": "inspection_criteria",
@@ -224,7 +262,7 @@
    "fieldname": "ch1",
    "fieldtype": "Select",
    "label": "1 Equipment documentation is available",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_kicj",
@@ -243,7 +281,7 @@
    "fieldname": "ch2",
    "fieldtype": "Select",
    "label": "2 Previous inspection reports are checked",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_vvqp",
@@ -262,7 +300,7 @@
    "fieldname": "ch3",
    "fieldtype": "Select",
    "label": "3  Rated load is clearly marked on bridge",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_htlt",
@@ -281,7 +319,7 @@
    "fieldname": "ch4",
    "fieldtype": "Select",
    "label": "4 Manufacturer\u2019s data available",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xptj",
@@ -300,7 +338,7 @@
    "fieldname": "ch5",
    "fieldtype": "Select",
    "label": "5 Controls and protective equipment available",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ozna",
@@ -319,7 +357,7 @@
    "fieldname": "ch6",
    "fieldtype": "Select",
    "label": "6 All hoist limit devices are working",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_sjft",
@@ -338,7 +376,7 @@
    "fieldname": "ch7",
    "fieldtype": "Select",
    "label": "7 All travel limit devices are working",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ovxc",
@@ -357,7 +395,7 @@
    "fieldname": "ch8",
    "fieldtype": "Select",
    "label": "8 Ropes lubricated and free of damages",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_vyqm",
@@ -376,7 +414,7 @@
    "fieldname": "ch9",
    "fieldtype": "Select",
    "label": "9 Fire extinguisher (10 BC) is fitted",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_pmiy",
@@ -395,7 +433,7 @@
    "fieldname": "ch10",
    "fieldtype": "Select",
    "label": "10 Hook(s) condition/performance",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_txxn",
@@ -414,7 +452,7 @@
    "fieldname": "ch11",
    "fieldtype": "Select",
    "label": "11 Rigging Hardware condition/performance",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_lgpz",
@@ -433,7 +471,7 @@
    "fieldname": "ch12",
    "fieldtype": "Select",
    "label": "12 pins, bearings, shafts, gears, rollers, and locking and clamping devices",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_toot",
@@ -452,7 +490,7 @@
    "fieldname": "ch12_a",
    "fieldtype": "Select",
    "label": "12-a  excessive wear, cracking, distortion, corrosion for point 12",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xmjj",
@@ -471,7 +509,7 @@
    "fieldname": "ch13",
    "fieldtype": "Select",
    "label": "13  brake and clutch system parts and linings",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_vjum",
@@ -490,7 +528,7 @@
    "fieldname": "ch13_a",
    "fieldtype": "Select",
    "label": "13-a  excessive wear, severe distortion, damage for point 13",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_rhqf",
@@ -509,7 +547,7 @@
    "fieldname": "ch14",
    "fieldtype": "Select",
    "label": "14 pawls and ratchets for (-a) excessive wear (-b) deformation",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_espa",
@@ -528,7 +566,7 @@
    "fieldname": "ch15",
    "fieldtype": "Select",
    "label": "15 All moving parts are lubricated",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xeya",
@@ -547,7 +585,7 @@
    "fieldname": "ch16",
    "fieldtype": "Select",
    "label": "16 chain and chain drive sprockets for (-a) excessive wear (-b) excessive chain stretch",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_jkha",
@@ -566,7 +604,7 @@
    "fieldname": "ch17",
    "fieldtype": "Select",
    "label": "17 power source, if integral to winch, for (-a) improper performance (-b) noncompliance with manufacturer \u2019s requirements",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_bnln",
@@ -585,7 +623,7 @@
    "fieldname": "ch18",
    "fieldtype": "Select",
    "label": "18  any additional items specified by the manufacturer or a qualified person",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ieai",
@@ -604,7 +642,7 @@
    "fieldname": "ch19",
    "fieldtype": "Select",
    "label": "19  LOAD TEST (Where applicable)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_jtwm",
@@ -623,7 +661,7 @@
    "fieldname": "ch20",
    "fieldtype": "Select",
    "label": "20  Final Conclusion (Accepted/Rejected)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ksic",
@@ -640,11 +678,14 @@
    "label": "Signature Checklist"
   },
   {
+   "default": "user",
    "fieldname": "inspector",
    "fieldtype": "Data",
-   "label": "Inspector"
+   "label": "Inspector",
+   "read_only": 1
   },
   {
+   "default": "Today",
    "fieldname": "date_insector",
    "fieldtype": "Date",
    "label": "Date"
@@ -659,11 +700,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "job_order_no.contact_person",
    "fieldname": "customer_representative",
    "fieldtype": "Data",
-   "label": "Customer Representative"
+   "label": "Customer Representative",
+   "read_only": 1
   },
   {
+   "default": "Today",
    "fieldname": "date_representative",
    "fieldtype": "Date",
    "label": "Date"
@@ -687,10 +731,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-25 09:56:48.338002",
+ "modified": "2024-09-17 12:24:01.470221",
  "modified_by": "Administrator",
  "module": "Uis",
  "name": "Base Mounted Drum Hoists  Checklist",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

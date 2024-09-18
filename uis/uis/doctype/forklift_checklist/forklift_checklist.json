@@ -6,7 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "checklist_information_section",
-  "customer_name",
+  "job_order_no",
   "lnspection_location",
   "equipment_type",
   "manufacturers_name",
@@ -15,7 +15,7 @@
   "capacity_swl",
   "fork_size",
   "column_break_gbbl",
-  "job_order_no",
+  "customer_name",
   "inspection_date",
   "sticker_no",
   "serial_no",
@@ -184,11 +184,12 @@
    "label": "Checklist Information"
   },
   {
+   "fetch_from": "job_order_no.customer_name",
    "fieldname": "customer_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Customer Name",
-   "options": "Customer",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -233,10 +234,13 @@
   },
   {
    "fieldname": "job_order_no",
-   "fieldtype": "Data",
-   "label": "Job Order No."
+   "fieldtype": "Link",
+   "label": "Job Order No.",
+   "options": "Job Order",
+   "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "inspection_date",
    "fieldtype": "Date",
    "label": "Inspection Date"
@@ -281,7 +285,7 @@
    "fieldname": "ch1_1",
    "fieldtype": "Select",
    "label": "1.1 Equipment documentation is available",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_bgqm",
@@ -300,7 +304,7 @@
    "fieldname": "ch1_2",
    "fieldtype": "Select",
    "label": "1.2 Previous inspection reports are checked",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_sbyl",
@@ -319,7 +323,7 @@
    "fieldname": "ch1_3",
    "fieldtype": "Select",
    "label": "1.3 Fork lift identification number, SWL/payload, and the maximum gross weight is clearly displayed",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_rzan",
@@ -338,7 +342,7 @@
    "fieldname": "ch1_4",
    "fieldtype": "Select",
    "label": "1.4 Check Lift/Tilt (and reach) Rams for leaks.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_bbbr",
@@ -357,7 +361,7 @@
    "fieldname": "ch1_5",
    "fieldtype": "Select",
    "label": "1.5 Startup truck/ Check all transmission functions i.e. Drive Steering.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xzft",
@@ -376,7 +380,7 @@
    "fieldname": "ch1_6",
    "fieldtype": "Select",
    "label": "1.6 Check all lifting functions i.e. Lower Tilt, Reach etc.....",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_hlxb",
@@ -396,7 +400,7 @@
    "fieldname": "ch2_1",
    "fieldtype": "Select",
    "label": "2.1 Tires Condition ",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ojfz",
@@ -415,7 +419,7 @@
    "fieldname": "ch2_2",
    "fieldtype": "Select",
    "label": "2.2  Tires free of  cut and worn out.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_nglp",
@@ -434,7 +438,7 @@
    "fieldname": "ch2_3",
    "fieldtype": "Select",
    "label": "2.3 Re-treaded on tires ",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_fdwu",
@@ -453,7 +457,7 @@
    "fieldname": "ch2_4",
    "fieldtype": "Select",
    "label": "2.4 Wheel loader to be fitted with a spare tire and changing equipment to safely change a tire.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_upsw",
@@ -472,7 +476,7 @@
    "fieldname": "ch2_5",
    "fieldtype": "Select",
    "label": "2.5 Check condition and security of wheel nuts.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xept",
@@ -492,7 +496,7 @@
    "fieldname": "ch3_1",
    "fieldtype": "Select",
    "label": "3.1 Signs, stickers or labels fitted not obstructing operator's vision or use of any controls.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ggpn",
@@ -511,7 +515,7 @@
    "fieldname": "ch3_2",
    "fieldtype": "Select",
    "label": "3.2 Horn is operational.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_tkfu",
@@ -530,7 +534,7 @@
    "fieldname": "ch3_3",
    "fieldtype": "Select",
    "label": "3.3 All instrumentation in working order. (fuel gauge, temperature indicator and hydraulic pressure gauge)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_gvyg",
@@ -549,7 +553,7 @@
    "fieldname": "ch3_4",
    "fieldtype": "Select",
    "label": "3.4 Operator's seat shall be fitted with at least two points seat belt if originally designed.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_khlu",
@@ -568,7 +572,7 @@
    "fieldname": "ch3_5",
    "fieldtype": "Select",
    "label": "3.5 Equipped with a protection device that protects Operator in case of roll over or from falling cargo.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_vikn",
@@ -587,7 +591,7 @@
    "fieldname": "ch3_6",
    "fieldtype": "Select",
    "label": "3.6 No handles exposed on outside of protective cabin cage",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_dhrg",
@@ -607,7 +611,7 @@
    "fieldname": "ch4_1",
    "fieldtype": "Select",
    "label": "4.1  Orange or Yellow revolving light or strobe light.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xgxh",
@@ -626,7 +630,7 @@
    "fieldname": "ch4_2",
    "fieldtype": "Select",
    "label": "4.2  Brake lights and indicator (if fitted) in good working order.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_kyib",
@@ -645,7 +649,7 @@
    "fieldname": "ch4_3",
    "fieldtype": "Select",
    "label": "4.3 Equipped with driving head and reverse lights and beam light for support during lifting operations.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xnfw",
@@ -664,7 +668,7 @@
    "fieldname": "ch4_4",
    "fieldtype": "Select",
    "label": "4.4  Be fitted with rear mounted audible reversing alarm.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_hobc",
@@ -684,7 +688,7 @@
    "fieldname": "ch5_1",
    "fieldtype": "Select",
    "label": "5.1 Forks and its sliding bar shall be free of any unauthorized welding, cracks and easily adjusted.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_dowy",
@@ -703,7 +707,7 @@
    "fieldname": "ch5_2",
    "fieldtype": "Select",
    "label": "5.2 Forks to be properly aligned (not bent).",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_jjqi",
@@ -722,7 +726,7 @@
    "fieldname": "ch5_3",
    "fieldtype": "Select",
    "label": "5.3 Any fork extension or other attachments must be certified for use with rated capacities",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_rzux",
@@ -741,7 +745,7 @@
    "fieldname": "ch5_4",
    "fieldtype": "Select",
    "label": "5.4 Ensure the lateral locks on the forks are working.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xfjv",
@@ -761,7 +765,7 @@
    "fieldname": "ch6_1",
    "fieldtype": "Select",
    "label": "6.1  Engine oil maintained at required level.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_odsd",
@@ -780,7 +784,7 @@
    "fieldname": "ch6_2",
    "fieldtype": "Select",
    "label": "6.2  Radiator fluid maintained at required level.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_zlgg",
@@ -799,7 +803,7 @@
    "fieldname": "ch6_3",
    "fieldtype": "Select",
    "label": "6.3  Brake & Clutch fluid maintained at required level.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_gquc",
@@ -818,7 +822,7 @@
    "fieldname": "ch6_4",
    "fieldtype": "Select",
    "label": "6.4  Battery condition and connections.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_mjmn",
@@ -837,7 +841,7 @@
    "fieldname": "ch6_5",
    "fieldtype": "Select",
    "label": "6.5  Fuel and Oil tanks shall be free of leakage.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_mrqb",
@@ -856,7 +860,7 @@
    "fieldname": "ch6_6",
    "fieldtype": "Select",
    "label": "6.6  All hydraulics (hydraulic hoses, hydraulic pump, pistons) to be fully functional without leakage.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_tigs",
@@ -876,7 +880,7 @@
    "fieldname": "ch7_1",
    "fieldtype": "Select",
    "label": "7.1  In cab fire extinguisher securely mounted on a bracket and located so it is easily accessible in an emergency.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ibsu",
@@ -895,7 +899,7 @@
    "fieldname": "ch7_2",
    "fieldtype": "Select",
    "label": "7.2  Foot brake and Hand brake control system are operational and could hold the wheel loader on an inclined.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_mrez",
@@ -914,7 +918,7 @@
    "fieldname": "ch7_3",
    "fieldtype": "Select",
    "label": "7.3  All rotating parts are guarded with cover.",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_gtll",
@@ -933,7 +937,7 @@
    "fieldname": "ch8",
    "fieldtype": "Select",
    "label": "8 Load test  Where applicable",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_dsgo",
@@ -952,7 +956,7 @@
    "fieldname": "ch9",
    "fieldtype": "Select",
    "label": "9  Final Conclusion (Accepted/Rejected)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_wqbg",
@@ -969,6 +973,7 @@
    "label": "Signature Checklist"
   },
   {
+   "default": "user",
    "fieldname": "inspector",
    "fieldtype": "Data",
    "label": "Inspector"
@@ -979,15 +984,18 @@
   },
   {
    "fieldname": "customer_representative",
-   "fieldtype": "Data",
-   "label": "Customer Representative"
+   "fieldtype": "Link",
+   "label": "Customer Representative",
+   "options": "Contact"
   },
   {
+   "default": "Today",
    "fieldname": "date_insector",
    "fieldtype": "Date",
    "label": "Date"
   },
   {
+   "default": "Today",
    "fieldname": "date_representative",
    "fieldtype": "Date",
    "label": "Date"
@@ -1016,7 +1024,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-25 09:55:41.411694",
+ "modified": "2024-09-11 15:41:37.722605",
  "modified_by": "Administrator",
  "module": "Uis",
  "name": "Forklift Checklist",

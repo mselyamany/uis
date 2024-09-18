@@ -6,21 +6,21 @@
  "engine": "InnoDB",
  "field_order": [
   "checklist_information_section",
-  "customer_name",
+  "job_order_no",
   "lnspection_location",
   "manufacturers_name",
   "model",
   "plate_no",
   "capacity_swl",
-  "ndt",
+  "load_test",
   "column_break_atjc",
-  "job_order_no",
+  "customer_name",
   "inspection_date",
   "sticker_no",
   "serial_no",
   "year_of_built",
   "type_of_inspection",
-  "load_test",
+  "ndt",
   "inspection_criteria",
   "ch1",
   "column_break_tzef",
@@ -110,42 +110,60 @@
    "label": "Checklist Information"
   },
   {
+   "fetch_from": "job_order_no.customer_name",
    "fieldname": "customer_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Customer Name",
    "options": "Customer",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "job_order_no.location",
    "fieldname": "lnspection_location",
    "fieldtype": "Data",
-   "label": "Inspection Location"
+   "label": "Inspection Location",
+   "read_only": 1
   },
   {
+   "fetch_from": "serial_no.manufacturer",
    "fieldname": "manufacturers_name",
    "fieldtype": "Data",
-   "label": "Manufacturer\u2019s Name"
+   "label": "Manufacturer\u2019s Name",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.model",
    "fieldname": "model",
    "fieldtype": "Data",
-   "label": "Model"
+   "label": "Model",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.plate_no",
    "fieldname": "plate_no",
    "fieldtype": "Data",
-   "label": "Plate No."
+   "label": "Plate No.",
+   "read_only": 1,
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.capacity_range_swl",
    "fieldname": "capacity_swl",
    "fieldtype": "Data",
-   "label": "Capacity / SWL"
+   "label": "Capacity / Range (SWL)",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "ndt",
-   "fieldtype": "Data",
-   "label": "NDT "
+   "fieldtype": "Link",
+   "label": "NDT ",
+   "options": "NDT Type",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_atjc",
@@ -153,33 +171,44 @@
   },
   {
    "fieldname": "job_order_no",
-   "fieldtype": "Data",
-   "label": "Job Order No."
+   "fieldtype": "Link",
+   "label": "Job Order No.",
+   "options": "Job Order",
+   "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "inspection_date",
    "fieldtype": "Date",
-   "label": "Inspection Date"
+   "label": "Inspection Date",
+   "reqd": 1
   },
   {
    "fieldname": "sticker_no",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Sticker No."
   },
   {
    "fieldname": "serial_no",
-   "fieldtype": "Data",
-   "label": "Serial No."
+   "fieldtype": "Link",
+   "label": "Serial No.",
+   "options": "Equpment Data",
+   "reqd": 1
   },
   {
+   "fetch_from": "serial_no.year_of_built",
    "fieldname": "year_of_built",
    "fieldtype": "Data",
-   "label": "Year of Built"
+   "label": "Year of Built",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "type_of_inspection",
-   "fieldtype": "Data",
-   "label": "Type of Inspection"
+   "fieldtype": "Link",
+   "label": "Type of Inspection",
+   "options": "Type of Inspection",
+   "reqd": 1
   },
   {
    "fieldname": "load_test",
@@ -196,7 +225,7 @@
    "fieldname": "ch1",
    "fieldtype": "Select",
    "label": "1.1  Check load chart availability (provided by manufacturer and matching with equipment model and type)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_tzef",
@@ -215,7 +244,7 @@
    "fieldname": "ch2",
    "fieldtype": "Select",
    "label": "1.2  Check work areas chart availability",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_wnka",
@@ -234,7 +263,7 @@
    "fieldname": "ch3",
    "fieldtype": "Select",
    "label": "1.3 Check marking of all control",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_xpac",
@@ -253,7 +282,7 @@
    "fieldname": "ch4",
    "fieldtype": "Select",
    "label": "1.4 Underneath machine: (a) Wheels & Tires (b) Steering rods/links (c) Axles",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_rysz",
@@ -272,7 +301,7 @@
    "fieldname": "ch5",
    "fieldtype": "Select",
    "label": "1.5  Lights/Strobes",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_gdek",
@@ -291,7 +320,7 @@
    "fieldname": "ch6",
    "fieldtype": "Select",
    "label": "1.6 Mirrors/Visibility aids",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_bode",
@@ -310,7 +339,7 @@
    "fieldname": "ch7",
    "fieldtype": "Select",
    "label": "1.7 Engine/Engine compartment: (a) Belts/Hoses (b) Cables/Wires (c) Debris",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_gwyb",
@@ -329,7 +358,7 @@
    "fieldname": "ch8",
    "fieldtype": "Select",
    "label": "1.8 Battery/Batteries: (a) Terminals tight (b) Clean/Dry/Secure ",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_kxpq",
@@ -348,7 +377,7 @@
    "fieldname": "ch9",
    "fieldtype": "Select",
    "label": "1.9 Hydraulics: (a) Cylinders/Rods (b) Hoses/Lines/Fittings (c) Pins/Locks",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_zeca",
@@ -367,7 +396,7 @@
    "fieldname": "ch10",
    "fieldtype": "Select",
    "label": "1.10 Fluids: a) Engine oil (b) Engine coolant (c) Hydraulic oil (d) Fuel/Battery\tLevel\tLeaks",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_qdul",
@@ -386,7 +415,7 @@
    "fieldname": "ch11",
    "fieldtype": "Select",
    "label": "1.11 Chassis: (a) Cab/Glass/Doors (b) Emergency Exit c) Entry/Exit steps (d) ROPS/FOPS (e) Fire Extinguisher/Suppression System",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_noyx",
@@ -405,7 +434,7 @@
    "fieldname": "ch12",
    "fieldtype": "Select",
    "label": "1.12 Digging Assembly:(a)Boom/Dipper/Bucket/Attachment b)Articulated joints(c)Front bucket&cutting edge(d)Bucket/attachment link pins&arms",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_lqub",
@@ -424,7 +453,7 @@
    "fieldname": "ch13",
    "fieldtype": "Select",
    "label": "1.13 Unit starts and runs properly",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_eyxb",
@@ -443,7 +472,7 @@
    "fieldname": "ch14",
    "fieldtype": "Select",
    "label": "1.14 Instruments/Gauges/ Hour Meter",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_sezw",
@@ -462,7 +491,7 @@
    "fieldname": "ch15",
    "fieldtype": "Select",
    "label": "1.15 Warning lights/audible alarms",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_tjlw",
@@ -481,7 +510,7 @@
    "fieldname": "ch16",
    "fieldtype": "Select",
    "label": "1.16 Fuel level",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_tbib",
@@ -500,7 +529,7 @@
    "fieldname": "ch17",
    "fieldtype": "Select",
    "label": "1.17 Horn/audible warning device(s)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_awvg",
@@ -519,7 +548,7 @@
    "fieldname": "ch18",
    "fieldtype": "Select",
    "label": "1.18 Final Conclusion (Accepted/Rejected)",
-   "options": "\nYes\nNo\nN/A"
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "column_break_ddmw",
@@ -536,11 +565,14 @@
    "label": "Signature Checklist"
   },
   {
+   "default": "user",
    "fieldname": "inspector",
    "fieldtype": "Data",
-   "label": "Inspector"
+   "label": "Inspector",
+   "read_only": 1
   },
   {
+   "default": "Today",
    "fieldname": "date_insector",
    "fieldtype": "Date",
    "label": "Date"
@@ -555,11 +587,15 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "job_order_no.contact_person",
    "fieldname": "customer_representative",
    "fieldtype": "Data",
-   "label": "Customer Representative"
+   "label": "Customer Representative",
+   "options": "Contact",
+   "read_only": 1
   },
   {
+   "default": "Today",
    "fieldname": "date_representative",
    "fieldtype": "Date",
    "label": "Date"
@@ -583,7 +619,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-25 09:56:26.828730",
+ "modified": "2024-09-17 12:33:56.518016",
  "modified_by": "Administrator",
  "module": "Uis",
  "name": "Backhoe Loader Checklist",

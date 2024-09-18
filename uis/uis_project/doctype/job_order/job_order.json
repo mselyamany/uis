@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "JOB-Order.-.######",
  "creation": "2024-09-05 12:12:39.392553",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,6 +10,7 @@
   "project_no",
   "project_name",
   "department",
+  "job_order_branch",
   "column_break_kiqm",
   "project_date",
   "job_order_date",
@@ -16,9 +18,15 @@
   "customer_details",
   "customer_name",
   "location",
+  "location_type",
+  "google_map_link",
+  "city",
+  "country",
   "column_break_tqqk",
   "contact_person",
-  "amended_from",
+  "full_name",
+  "email",
+  "phone",
   "services",
   "services_details_section",
   "service_job_order",
@@ -27,7 +35,8 @@
   "section_break_ukpr",
   "asset_job_order",
   "saftey_requirements_tab",
-  "saftey_requirements"
+  "saftey_requirements",
+  "amended_from"
  ],
  "fields": [
   {
@@ -114,16 +123,6 @@
    "options": "Contact"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Job Order",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
    "fieldname": "services",
    "fieldtype": "Tab Break",
    "label": "Services"
@@ -169,15 +168,80 @@
    "fieldname": "saftey_requirements",
    "fieldtype": "Text",
    "label": "Saftey Requirements"
+  },
+  {
+   "fetch_from": "location.address_type",
+   "fieldname": "location_type",
+   "fieldtype": "Data",
+   "label": "Location Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "location.custom_google_map_link",
+   "fieldname": "google_map_link",
+   "fieldtype": "Data",
+   "label": "Google Map Link"
+  },
+  {
+   "fetch_from": "location.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "location.country",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fetch_from": "contact_person.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_person.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "contact_person.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_order_branch",
+   "fieldtype": "Link",
+   "label": "Job Order Branch",
+   "options": "Branch",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-05 15:18:05.045574",
+ "modified": "2024-09-17 12:39:39.853141",
  "modified_by": "Administrator",
  "module": "UIS Project",
  "name": "Job Order",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

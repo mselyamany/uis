@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"OGGZx3GKpn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Inspection</span>\",\"col\":12}},{\"id\":\"R0gocPsKJU\",\"type\":\"card\",\"data\":{\"card_name\":\"Checklists and Forms\",\"col\":5}}]",
+ "content": "[{\"id\":\"OGGZx3GKpn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Inspection</span>\",\"col\":12}},{\"id\":\"R0gocPsKJU\",\"type\":\"card\",\"data\":{\"card_name\":\"Checklists and Forms\",\"col\":5}},{\"id\":\"hnCGppUX6n\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data\",\"col\":4}}]",
  "creation": "2024-07-29 10:56:52.625452",
  "custom_blocks": [],
  "docstatus": 0,
@@ -111,9 +111,88 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Data",
+   "link_count": 7,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equpment Data",
+   "link_count": 0,
+   "link_to": "Equpment Data",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment Type",
+   "link_count": 0,
+   "link_to": "Equipment Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Model",
+   "link_count": 0,
+   "link_to": "Model",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manufacturers",
+   "link_count": 0,
+   "link_to": "Manufacturers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Type OF Inspection",
+   "link_count": 0,
+   "link_to": "Type of Inspection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NDT Type",
+   "link_count": 0,
+   "link_to": "NDT Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stickers",
+   "link_count": 0,
+   "link_to": "Sticker No",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-09-05 14:08:07.735465",
+ "modified": "2024-09-17 14:32:29.398763",
  "modified_by": "Administrator",
  "module": "Uis",
  "name": "Inspection",

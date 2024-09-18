@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RFQ.-.#####",
+ "creation": "2024-09-16 16:00:56.621537",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rdwc",
+  "customer_name",
+  "service_type",
+  "column_break_vkjd",
+  "rfq_date",
+  "rfq_details_section",
+  "rfq_details",
+  "technical_reply_section",
+  "technical_reply"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rdwc",
+   "fieldtype": "Section Break",
+   "label": "Technical Inquiry"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vkjd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "rfq_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "RFQ Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rfq_details_section",
+   "fieldtype": "Section Break",
+   "label": "RFQ Details"
+  },
+  {
+   "fieldname": "rfq_details",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "RFQ Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technical_reply_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Reply"
+  },
+  {
+   "fieldname": "technical_reply",
+   "fieldtype": "Text",
+   "label": "Technical Reply"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-16 16:28:35.749874",
+ "modified_by": "Administrator",
+ "module": "UIS CRM",
+ "name": "technical inquiry",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
